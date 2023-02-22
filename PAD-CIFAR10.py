@@ -1,5 +1,5 @@
+# %%
 ### Import ###
-
 import torch
 from torch import nn
 import torchvision
@@ -10,6 +10,7 @@ import random
 import matplotlib.pyplot as plt
 from tqdm import tqdm_notebook as tqdm
 
+# %%
 ### Dataset (CIFAR10) ###
 
 batch_size = 512
@@ -19,7 +20,7 @@ transform = transforms.Compose(
                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
                                )
 
-dataset = torchvision.datasets.CIFAR10(root="./data",
+dataset = torchvision.datasets.ImageNet() #CIFAR10(root="./data",
                                        train=True, download=True,
                                        transform=transform)
 
